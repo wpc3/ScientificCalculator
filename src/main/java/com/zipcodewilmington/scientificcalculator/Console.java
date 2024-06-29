@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class Console {
 
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -91,55 +92,25 @@ public class Console {
 
         switch (operator) {
             case "+":
-                return (Arithmetic.addition(x,y));
+                return (double) (x + y);
             case "-":
-                return (Arithmetic.subtraction(x,y));
+                return (double) (x - y);
             case "/":
-                try {
-                    return (double) (x / y);
-                }catch(Exception e){
-                    System.out.println("err");
-                }
+                return (double) (x / y);
             case "inv":
-                return (Arithmetic.inverse(x));
+                return (double) (1 / x);
             case "[-]":
             case    "[+]":
-                return (Arithmetic.posAndNeg(x));
+                return (double) (toDoPositiveAndNegative(x));
             case "*":
             case "x":
-                return (Arithmetic.multiplication(x,y));
+                return x*y;
             case "^":
-            case "exp":
-                return (Arithmetic.power(x,y));
+                return x * x;
             case "sqr":
-                return  (Arithmetic.square(x));
-            case "sqrt":
-                return (Arithmetic.squareRoot(x));
-            case "sin":
-                return (Arithmetic.sin(x));
-            case "invsin":
-                return (Arithmetic.inverseSin(x));
-            case "invcos":
-                return (Arithmetic.inverseCosine(x));
-            case  "cos":
-                return (Arithmetic.cosine(x));
-            case "tan":
-                return (Arithmetic.tangent(x));
-            case "invtan":
-                return (Arithmetic.inverseTangent(x));
-//            case "log":
-//                return ();
-
-
-
-
-
-
-
-
-
-
-
+                return  Math.sqrt(x);
+            case "exp":
+                return Math.pow(x,y);
             default:
                 System.out.println("does not recognise");
                 return null;
@@ -166,8 +137,8 @@ public class Console {
 
 
 
-//    public static double toDoPositiveAndNegative(double value) {
-//        value = value * -1;
-//        return value;
-
+    public static double toDoPositiveAndNegative(double value) {
+        value = value * -1;
+        return value;
+    }
 }
