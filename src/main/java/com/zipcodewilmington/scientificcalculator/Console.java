@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Console {
 
-   
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -92,28 +92,43 @@ public class Console {
         Memory memory = new Memory();
         switch (operator) {
             case "+":
-                return (double) (x + y);
+                return (Arithmetic.addition(x,y));
             case "-":
-                return (double) (x - y);
+                return (Arithmetic.subtraction(x,y));
             case "/":
                 try {
                     return (double) (x / y);
                 }catch(Exception e){
                     System.out.println("err");
                 }
+                return (Arithmetic.division(x,y));
             case "inv":
-                return (double) (1 / x);
+                return (Arithmetic.inverse(x));
             case "[-]":
             case    "[+]":
-                return (double) (toDoPositiveAndNegative(x));
+                return (Arithmetic.posAndNeg(x));
             case "*":
             case "x":
-                return x*y;
+                return (Arithmetic.multiplication(x,y));
             case "^":
-                return x * x;
-            case "sqr":
-                return  Math.sqrt(x);
             case "exp":
+                return (Arithmetic.power(x,y));
+            case "sqr":
+                return  (Arithmetic.square(x));
+            case "sqrt":
+                return (Arithmetic.squareRoot(x));
+            case "sin":
+                return (Arithmetic.sin(x));
+            case "invsin":
+                return (Arithmetic.inverseSin(x));
+            case "invcos":
+                return (Arithmetic.inverseCosine(x));
+            case  "cos":
+                return (Arithmetic.cosine(x));
+            case "tan":
+                return (Arithmetic.tangent(x));
+            case "invtan":
+                return (Arithmetic.inverseTangent(x));
                 return Math.pow(x,y);
             case "MC": Memory.clearMemory(sum);
                 return sum = 0;
@@ -151,10 +166,9 @@ public class Console {
 
 
 
-    public static double toDoPositiveAndNegative(double value) {
-        value = value * -1;
-        return value;
-    }
 
+//    public static double toDoPositiveAndNegative(double value) {
+//        value = value * -1;
+//        return value;
 
 }
