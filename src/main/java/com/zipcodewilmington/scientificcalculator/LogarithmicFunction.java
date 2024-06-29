@@ -24,10 +24,13 @@ public class LogarithmicFunction {
         return Math.log(value);
     }
 
-    public static double negNaturalLog(double value){
-        return Math.log( - + value);
+    public static double baseLog(double value, double base){
+        return Math.log(value) / Math.log(base);
     }
 
+    public static double negNaturalLog(double value, double base){
+        return (1/(Math.pow(baseLog(value, base)));
+    }
 
 
 

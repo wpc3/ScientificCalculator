@@ -123,6 +123,7 @@ public class Console {
                 return (Arithmetic.tangent(x));
             case "invtan":
                 return (Arithmetic.inverseTangent(x));
+                
             default:
                 System.out.println("does not recognise");
                 return null;
