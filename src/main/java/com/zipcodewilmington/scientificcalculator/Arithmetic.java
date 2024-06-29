@@ -37,9 +37,4 @@ public class Arithmetic {
         x = x + y;
         return x;
     }
-
-    }
-
-
-
 }

@@ -1,6 +1,6 @@
 
 
-        package com.zipcodewilmington.scientificcalculator;
+package com.zipcodewilmington.scientificcalculator;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Console {
 
-   
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -81,8 +81,8 @@ public class Console {
 //
 // }}
 //        }
-        //figure out which operator
-        // make a switch statement to call for the appropriate operator method
+    //figure out which operator
+    // make a switch statement to call for the appropriate operator method
 //    }
 
 
@@ -118,7 +118,7 @@ public class Console {
             case "MC": Memory.clearMemory(sum);
                 return sum = 0;
             //might need a third variable declared of the sum and call on the sum variable for memory
-                // can make the sum variable in main
+            // can make the sum variable in main
             case "M+":
                 return memory.getMemory();
             case "MRC":
