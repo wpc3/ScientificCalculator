@@ -5,11 +5,16 @@ package com.zipcodewilmington.scientificcalculator;
  */
 public class MainApplication {
     public static void main(String[] args) {
+
+
         Console.println("Welcome to our calculator!");
         Double firstInt = Console.getDoubleInput("Enter first value");
         String operator = Console.getStringInput("Enter an operator");
         Double secondInt = Console.getDoubleInput("Enter second value");
         System.out.println(firstInt + operator + secondInt + "=" + Console.getArithmetic(operator,firstInt,secondInt));
+        String continue2 = Console.getStringInput("Would you like to continue, y or n?");
+
+
 
 //        Double d = Console.getDoubleInput("Enter a double.");
 

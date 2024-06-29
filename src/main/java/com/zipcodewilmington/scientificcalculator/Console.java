@@ -1,17 +1,24 @@
 
+
         package com.zipcodewilmington.scientificcalculator;
 import java.util.Objects;
 import java.util.Scanner;
+
 /**
  * Created by leon on 2/9/18.
  */
 public class Console {
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
+
     public static void println(String output, Object... args) {
         print(output + "\n", args);
     }
+
+
+
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
@@ -42,6 +49,7 @@ public class Console {
         Scanner scanner2 = new Scanner(System.in);
         println(prompt);
         Double userDouble = scanner2.nextDouble();
+
         return userDouble;
     }
 //    public static Integer getArithmetic(String operator, int x, int y){
@@ -76,8 +84,10 @@ public class Console {
         // make a switch statement to call for the appropriate operator method
 //    }
 
+
     public static Double getArithmetic(String operator, Double x, Double y) {
         //
+
 
         switch (operator) {
             case "+":
@@ -109,13 +119,21 @@ public class Console {
 //                return -;
 //
 //            }}
+
+
+
+
         }
         //figure out which operator
         // make a switch statement to call for the appropriate operator method
 
 
+
+
     }
 //     Will come back to this. Maybe wrap this into a if/else or method?
+
+
 
 
     public static double toDoPositiveAndNegative(double value) {
