@@ -8,6 +8,7 @@ public class MainApplication {
 
 
         Console.println("Welcome to our calculator!");
+
         Double firstInt = Console.getDoubleInput("Enter first value");
         String operator = Console.getStringInput("Enter an operator");
         Double secondInt = Console.getDoubleInput("Enter second value");
