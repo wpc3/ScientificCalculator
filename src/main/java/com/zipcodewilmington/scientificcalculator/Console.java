@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Console {
 
-   
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
@@ -88,19 +88,15 @@ public class Console {
 
     public static Double getArithmetic(String operator, Double x, Double y) {
         //
-        double sum = 0;
-        Memory memory = new Memory();
+
+
         switch (operator) {
             case "+":
                 return (double) (x + y);
             case "-":
                 return (double) (x - y);
             case "/":
-                try {
-                    return (double) (x / y);
-                }catch(Exception e){
-                    System.out.println("err");
-                }
+                return (double) (x / y);
             case "inv":
                 return (double) (1 / x);
             case "[-]":
@@ -115,16 +111,6 @@ public class Console {
                 return  Math.sqrt(x);
             case "exp":
                 return Math.pow(x,y);
-            case "MC": Memory.clearMemory(sum);
-                return sum = 0;
-            //might need a third variable declared of the sum and call on the sum variable for memory
-                // can make the sum variable in main
-            case "M+":
-                return memory.getMemory();
-            case "MRC":
-
-//                double savedMemory = 0;
-//                return memory.setMemory(savedMemory);
             default:
                 System.out.println("does not recognise");
                 return null;
@@ -155,6 +141,4 @@ public class Console {
         value = value * -1;
         return value;
     }
-
-
 }
