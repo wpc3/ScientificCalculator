@@ -91,25 +91,38 @@ public class Console {
 
         switch (operator) {
             case "+":
-                return (double) (x + y);
+                return (Arithmetic.addition(x,y));
             case "-":
-                return (double) (x - y);
+                return (Arithmetic.subtraction(x,y));
             case "/":
-                return (double) (x / y);
+                return (Arithmetic.division(x,y));
             case "inv":
-                return (double) (1 / x);
+                return (Arithmetic.inverse(x));
             case "[-]":
             case    "[+]":
-                return (double) (toDoPositiveAndNegative(x));
+                return (Arithmetic.posAndNeg(x));
             case "*":
             case "x":
-                return x*y;
+                return (Arithmetic.multiplication(x,y));
             case "^":
-                return x * x;
-            case "sqr":
-                return  Math.sqrt(x);
             case "exp":
-                return Math.pow(x,y);
+                return (Arithmetic.power(x,y));
+            case "sqr":
+                return  (Arithmetic.square(x));
+            case "sqrt":
+                return (Arithmetic.squareRoot(x));
+            case "sin":
+                return (Arithmetic.sin(x));
+            case "invsin":
+                return (Arithmetic.inverseSin(x));
+            case "invcos":
+                return (Arithmetic.inverseCosine(x));
+            case  "cos":
+                return (Arithmetic.cosine(x));
+            case "tan":
+                return (Arithmetic.tangent(x));
+            case "invtan":
+                return (Arithmetic.inverseTangent(x));
             default:
                 System.out.println("does not recognise");
                 return null;
@@ -136,8 +149,8 @@ public class Console {
 
 
 
-    public static double toDoPositiveAndNegative(double value) {
-        value = value * -1;
-        return value;
-    }
+//    public static double toDoPositiveAndNegative(double value) {
+//        value = value * -1;
+//        return value;
+
 }
