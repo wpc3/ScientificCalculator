@@ -95,7 +95,11 @@ public class Console {
             case "-":
                 return (double) (x - y);
             case "/":
-                return (double) (x / y);
+                try {
+                    return (double) (x / y);
+                }catch(Exception e){
+                    System.out.println("err");
+                }
             case "inv":
                 return (double) (1 / x);
             case "[-]":
