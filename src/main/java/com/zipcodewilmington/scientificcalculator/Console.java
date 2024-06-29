@@ -23,7 +23,15 @@ public class Console {
         println(prompt);
         String operator = scanner.nextLine();
         return operator;
+
     }
+
+    public static String getSecondStringInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        println("Would you like to continue, y/ n?");
+        return scanner.nextLine();
+    }
+
 
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
@@ -58,6 +66,15 @@ public class Console {
                     return x-y;
                 case "/":
                     return x/y;
+                case "*":
+                case "x":
+                    return x*y;
+                case "^":
+                    return x * x;
+                case "sqr":
+                    return (int) Math.sqrt(x);
+                case "exp":
+                    return (int) Math.pow(x,y);
                 default:
                     System.out.println("does not recognise");
                     return null;
