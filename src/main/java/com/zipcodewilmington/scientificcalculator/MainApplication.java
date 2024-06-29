@@ -6,9 +6,9 @@ package com.zipcodewilmington.scientificcalculator;
 public class MainApplication {
     public static void main(String[] args) {
         Console.println("Welcome to our calculator!");
-        Integer firstInt = Console.getIntegerInput("Enter first value");
+        Double firstInt = Console.getDoubleInput("Enter first value");
         String operator = Console.getStringInput("Enter an operator");
-        Integer secondInt = Console.getIntegerInput("Enter second value");
+        Double secondInt = Console.getDoubleInput("Enter second value");
         System.out.println(firstInt + operator + secondInt + "=" + Console.getArithmetic(operator,firstInt,secondInt));
 
 //        Double d = Console.getDoubleInput("Enter a double.");

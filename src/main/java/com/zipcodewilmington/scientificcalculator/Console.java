@@ -1,78 +1,125 @@
-package com.zipcodewilmington.scientificcalculator;
 
+        package com.zipcodewilmington.scientificcalculator;
 import java.util.Objects;
 import java.util.Scanner;
-
 /**
  * Created by leon on 2/9/18.
  */
 public class Console {
-
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
-
     public static void println(String output, Object... args) {
         print(output + "\n", args);
     }
-
-
-
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         String operator = scanner.nextLine();
         return operator;
     }
-
+    public static String getSecondStringInput(String prompt){
+        Scanner scanner = new Scanner(System.in);
+        println("Would you like to continue, y/ n?");
+        return scanner.nextLine();
+    }
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         Integer x = scanner.nextInt();
         return x;
-//        System.out.println("Enter another value");
-//        Integer y = scanner.nextInt();
-//        String operator;
-//        String enteredValue = getStringInput(operator);
+// System.out.println("Enter another value");
+// Integer y = scanner.nextInt();
+// String operator;
+// String enteredValue = getStringInput(operator);
 //
-//      if(operator){ z = x + y;
+// if(operator){ z = x + y;
 //
-//      }
-//        return null;
+// }
+// return null;
     }
     public static Double getDoubleInput(String prompt) {
         Scanner scanner2 = new Scanner(System.in);
         println(prompt);
         Double userDouble = scanner2.nextDouble();
-
         return userDouble;
-        }
+    }
+//    public static Integer getArithmetic(String operator, int x, int y){
+//        //
+//        switch (operator) {
+//            case "+":
+//                return x+y;
+//            case "-":
+//                return x-y;
+//            case "/":
+//                return x/y;
+//            case "*":
+//            case "x":
+//                return x*y;
+//            case "^":
+//                return x * x;
+//            case "sqr":
+//                return (int) Math.sqrt(x);
+//            case "exp":
+//                return (int) Math.pow(x,y);
+//            default:
+//                System.out.println("does not recognise");
+//                return null;
+// if (Objects.equals(operator, "+")){
+//
+// } else if (Objects.equals(prompt, "-")){
+// return -;
+//
+// }}
+//        }
+        //figure out which operator
+        // make a switch statement to call for the appropriate operator method
+//    }
 
-        public static Integer getArithmetic(String operator, int x, int y){
-            //
+    public static Double getArithmetic(String operator, Double x, Double y) {
+        //
 
-            switch (operator) {
-                case "+":
-                    return x+y;
-                case "-":
-                    return x-y;
-                case "/":
-                    return x/y;
-                default:
-                    System.out.println("does not recognise");
-                    return null;
+        switch (operator) {
+            case "+":
+                return (double) (x + y);
+            case "-":
+                return (double) (x - y);
+            case "/":
+                return (double) (x / y);
+            case "inv":
+                return (double) (1 / x);
+            case "[-]":
+            case    "[+]":
+                return (double) (toDoPositiveAndNegative(x));
+            case "*":
+            case "x":
+                return x*y;
+            case "^":
+                return x * x;
+            case "sqr":
+                return  Math.sqrt(x);
+            case "exp":
+                return Math.pow(x,y);
+            default:
+                System.out.println("does not recognise");
+                return null;
 //            if (Objects.equals(operator, "+")){
 //
 //            } else if (Objects.equals(prompt, "-")){
 //                return -;
 //
 //            }}
-            }
-            //figure out which operator
-    // make a switch statement to call for the appropriate operator method
-
         }
+        //figure out which operator
+        // make a switch statement to call for the appropriate operator method
+
+
+    }
+//     Will come back to this. Maybe wrap this into a if/else or method?
+
+
+    public static double toDoPositiveAndNegative(double value) {
+        value = value * -1;
+        return value;
+    }
 }
-
-
-
