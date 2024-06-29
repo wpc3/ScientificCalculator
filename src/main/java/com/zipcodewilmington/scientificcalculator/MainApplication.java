@@ -8,9 +8,10 @@ public class MainApplication {
 
 
         Console.println("Welcome to our calculator!");
-        Double firstInt = Console.getDoubleInput("Enter first value");
-        String operator = Console.getStringInput("Enter an operator");
-        Double secondInt = Console.getDoubleInput("Enter second value");
+        Double firstInt = Console.getDoubleInput("Enter a command");
+        String operator = Console.getStringInput("Enter next command or operator");
+        Double secondInt = Console.getDoubleInput("Enter next command");
+
         System.out.println(firstInt + operator + secondInt + "=" + Console.getArithmetic(operator,firstInt,secondInt));
         String continue2 = Console.getStringInput("Would you like to continue, y or n?");
 
