@@ -20,16 +20,20 @@ public class LogarithmicFunction {
         this.base = base;
     }
 
-    public static double naturalLog(double value){
-        return Math.log(value);
-    }
-
     public static double baseLog(double value, double base){
         return Math.log(value) / Math.log(base);
     }
 
-    public static double negNaturalLog(double value, double base){
-        return (1/(Math.pow(baseLog(value, base)));
+    public static double naturaLog(double value){
+        return Math.log(value);
+    }
+
+    public static double negNaturalLog(double value){
+        return Math.pow(10,value);
+    }
+
+    public static double negBaseLog(double base, double value){
+        return Math.pow(base, value);
     }
 
 
