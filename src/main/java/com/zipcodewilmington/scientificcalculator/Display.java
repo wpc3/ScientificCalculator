@@ -18,8 +18,10 @@ public class Display {
         return display;
     }
 
-    public void switchDisplayMode(String display) {
-        this.display = display;
+    public String switchDisplayMode(String display) {
+
+        display = "0";
+        return display;
     }
 
     public Double convertToBinary(double binary){
@@ -35,9 +37,6 @@ public class Display {
     }
 
     public Double convertToDecimal(double decimal){
-
-
-       decimal =
 
         return decimal;
     }
