@@ -24,7 +24,7 @@ public class LogarithmicFunction {
         return Math.log(value) / Math.log(base);
     }
 
-    public static double naturaLog(double value){
+    public static double naturalLog(double value){
         return Math.log(value);
     }
 

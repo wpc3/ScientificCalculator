@@ -13,6 +13,7 @@ public class MemoryTest extends TestCase {
         double actual = memory.getMemory();
         Assert.assertEquals(actual, expected,0.5);
 
+
     }
 
 

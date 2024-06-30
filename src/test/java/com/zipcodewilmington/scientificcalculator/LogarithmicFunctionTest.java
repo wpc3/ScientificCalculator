@@ -14,7 +14,7 @@ public class LogarithmicFunctionTest extends TestCase {
 
     public void testNaturalLog() {
         LogarithmicFunction logarithmicFunction = new LogarithmicFunction();
-        double actualResult = LogarithmicFunction.naturaLog(6.2);
+        double actualResult = LogarithmicFunction.naturalLog(6.2);
         double expectedResult = 1.8245492920510458;
         Assert.assertEquals(expectedResult, actualResult,0.5);
     }
