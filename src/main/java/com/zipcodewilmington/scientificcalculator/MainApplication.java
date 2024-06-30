@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import com.zipcodewilmington.scientificcalculator.Console;
+
 import java.util.Scanner;
 
 /**
@@ -10,7 +12,17 @@ public class MainApplication {
 
         Scanner scanner = new Scanner(System.in);
 
+        Display display = new Display();
+
         Console.println("Welcome to our calculator!");
+
+        String preferredDisplay = Console.getStringInput("DEG or RAD");
+
+        display.switchDisplayMode(preferredDisplay);
+
+
+
+        System.out.println();
 
         Double firstInt = Console.getDoubleInput("Enter a command");
         String operator = Console.getStringInput("Enter next command or operator");
@@ -23,6 +35,7 @@ public class MainApplication {
         int index = equation.lastIndexOf("=");
         double result = Double.parseDouble(equation.substring(index+1));
 
+//        double trigResult = Console.switchDisplay("DEG or RAD" + preferredDisplay + result);
 
         String continue2 = Console.getStringInput("Would you like to continue, y or n?");
 
