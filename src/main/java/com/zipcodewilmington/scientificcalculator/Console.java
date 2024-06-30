@@ -127,7 +127,6 @@ public class Console {
                 return (Arithmetic.tangent(x));
             case "invtan":
                 return (Arithmetic.inverseTangent(x));
-            return Math.pow(x,y);
             case "MC": Memory.clearMemory(sum);
                 return sum = 0;
             //might need a third variable declared of the sum and call on the sum variable for memory
