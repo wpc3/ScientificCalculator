@@ -1,5 +1,4 @@
 package com.zipcodewilmington.scientificcalculator;
-import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -10,6 +9,7 @@ public class Console {
 
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
+        return ;
     }
 
     public static void println(String output, Object... args) {
@@ -82,12 +82,26 @@ public class Console {
     //figure out which operator
     // make a switch statement to call for the appropriate operator method
 //    }
+        public static Double switchDisplay(String input, double choice ){
+          Display display = new Display();
 
+
+        switch (input){
+            case "DEG":
+                return choice;
+            case "RAD":
+                return choice;
+                default:
+                System.out.println("does not recognise");
+        }
+            return null;
+        }
 
     public static Double getArithmetic(String operator, Double x, Double y) {
         //
         double sum = 0;
         Memory memory = new Memory();
+        Display display = new Display();
         switch (operator) {
             case "+":
                 return (Arithmetic.addition(x,y));
@@ -127,17 +141,19 @@ public class Console {
                 return (Arithmetic.tangent(x));
             case "invtan":
                 return (Arithmetic.inverseTangent(x));
-            return Math.pow(x,y);
+
             case "MC": Memory.clearMemory(sum);
                 return sum = 0;
             //might need a third variable declared of the sum and call on the sum variable for memory
             // can make the sum variable in main
             case "M+":
                 return memory.getMemory();
-            case "MRC":
-
-//                double savedMemory = 0;
-//                return memory.setMemory(savedMemory);
+//            case "MRC":
+//
+////                double savedMemory = 0;
+////                return memory.setMemory(savedMemory);
+//            case "DEG":
+//                return display.convertToDegrees(sum);
             default:
                 System.out.println("does not recognise");
                 return null;
@@ -168,5 +184,9 @@ public class Console {
 //    public static double toDoPositiveAndNegative(double value) {
 //        value = value * -1;
 //        return value;
-
+//        public static Double storeEvent(String operator, double answer, double x, double y){
+//            answer = getArithmetic(" ");
+//
+//            return answer;
+//        }
 }
