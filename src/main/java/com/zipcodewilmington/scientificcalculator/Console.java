@@ -83,6 +83,22 @@ public class Console {
     // make a switch statement to call for the appropriate operator method
 //    }
 
+    public static Double switchDisplay(String input, double choice ){
+        Display display = new Display();
+
+
+        switch (input){
+            case "DEG":
+                return choice;
+            case "RAD":
+                return choice;
+            default:
+                System.out.println("does not recognise");
+        }
+        return null;
+    }
+
+
 
     public static Double getArithmetic(String operator, Double x, Double y) {
         //
@@ -127,45 +143,30 @@ public class Console {
                 return (Arithmetic.tangent(x));
             case "invtan":
                 return (Arithmetic.inverseTangent(x));
-            case "MC": Memory.clearMemory(sum);
-                return sum = 0;
-            //might need a third variable declared of the sum and call on the sum variable for memory
-            // can make the sum variable in main
+            case "MC":
+                return Memory.clearMemory(sum);
             case "M+":
-                return memory.getMemory();
+                return memory.setMemory(x);
             case "MRC":
+                return memory.getMemory();
+            case "!":
+                return (Factorial.getFactorialOfNumbers(x));
+            case "log":
+                return LogarithmicFunction.baseLog(x,y);
+            case "nlog":
+                return LogarithmicFunction.naturalLog(x);
+            case "-log":
+                return LogarithmicFunction.negBaseLog(x,y);
+            case "-nlog":
+                return LogarithmicFunction.negNaturalLog(x);
 
-//                double savedMemory = 0;
-//                return memory.setMemory(savedMemory);
             default:
                 System.out.println("does not recognise");
                 return null;
-//            if (Objects.equals(operator, "+")){
-//
-//            } else if (Objects.equals(prompt, "-")){
-//                return -;
-//
-//            }}
-
-
 
 
         }
-        //figure out which operator
-        // make a switch statement to call for the appropriate operator method
-
-
-
 
     }
-//     Will come back to this. Maybe wrap this into a if/else or method?
-
-
-
-
-
-//    public static double toDoPositiveAndNegative(double value) {
-//        value = value * -1;
-//        return value;
 
 }
