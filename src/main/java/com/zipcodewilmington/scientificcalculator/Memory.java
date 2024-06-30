@@ -13,8 +13,8 @@ public class Memory {
     }
 
     public static double clearMemory(double memory){
-    memory = memory*0;
-    return memory;
+        memory = memory*0;
+        return memory;
     }
 
 }
