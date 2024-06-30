@@ -35,7 +35,10 @@ public class Display {
     }
 
     public Double convertToDecimal(double decimal){
-       decimal = 0;
+
+
+       decimal =
+
         return decimal;
     }
 
