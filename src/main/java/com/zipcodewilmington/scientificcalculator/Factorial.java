@@ -12,15 +12,35 @@ public class Factorial {
         this.value = value;
     }
 
-    public static double getFactorialofNumbers(double value){
-        double sum = 0;
-        if (value <=0){
-            System.out.println("Need a positive value");
-        } else {
-            for (double i=value; value >=1; value--){
-                sum = sum * value;
-            }
+    //WHOLE NUMBERS ONLY PLEAAAASE!
+    public static double getFactorialOfNumbers(double value) {
+        double sum = 1;
+
+        double floorValue = Math.floor(value);
+        for (double i = floorValue; i > 0; i--) {
+            sum = sum * i;
         }
         return sum;
     }
+
+//code to attempt to work with decimal numbers
+//    public static double getFactorialofNumbers(double value){
+//        double sum = 1;
+//
+//        double absoluteValue = Math.abs(value);
+//        double decimal = absoluteValue - Math.floor(value);
+//            for (double i=Math.floor(absoluteValue); i >decimal; i--){
+//
+//                if (value <1){
+//                    sum = absoluteValue + decimal;
+//                    return sum = sum * (value + i);
+//                }
+//                sum = sum * (i + decimal);
+//            }
+//
+//        return sum;
+//    }
+
+
 }
+
