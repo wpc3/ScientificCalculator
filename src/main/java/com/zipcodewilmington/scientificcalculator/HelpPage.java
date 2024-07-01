@@ -20,6 +20,8 @@ public class HelpPage {
                        "symbols" + "\n" +
                        "\"--memory help\" for storing or  " + "\n" +
                        "clearing or recalling values in mem" + "\n" +
+                       "\"--trig help\" for trig operators" + "\n" +
+                       "\"--log help\" for log operators" + "\n" +
                        "<*><*><*><*><*><*><*><*><*><*><*><*>";
                return help;
            case "--operator help":
@@ -28,8 +30,13 @@ public class HelpPage {
                        "operator symbols are as follows: " + "\n" +
                        "\"+ or - or / or *\"  for basic  " + "\n" +
                        "arithmetic" + "\n" +
-                        "\"sine or cosine or tan or -sine\"  " + "\n" +
-                         "\"or -tan or -cosine\"  " + "\n" +
+                       "\"!\" for factorial " + "\n" +
+                       "\"inv\" for inverse " + "\n" +
+                       "\"sqrt\" for square root " + "\n" +
+                       "\"sqr\" for square " + "\n" +
+                       "\"[+] or [-]\" for positive or minus" + "\n" +
+                       "\"^\" for power " + "\n" +
+                       "\"exp\" for exponential " + "\n" +
                        "<*><*><*><*><*><*><*><*><*><*><*><*>";
                return oppHelp;
            case "--memory help":
@@ -41,6 +48,20 @@ public class HelpPage {
                         "\"MRC\" recall stored value " + "\n" +
                         "<*><*><*><*><*><*><*><*><*><*><*><*>";
                return memHelp;
+           case "--trig help":
+               String trigHelp =
+                       "<*><*><*><*><*><*><*><*><*><*><*><*>" + "\n" +
+                       "\"sin or cos or tan or invsin\"  " + "\n" +
+                       "\"or invtan or invcos\" for trig " + "\n" +
+                       "<*><*><*><*><*><*><*><*><*><*><*><*>";
+               return trigHelp;
+           case "--log help":
+               String logHelp =
+                       "<*><*><*><*><*><*><*><*><*><*><*><*>" + "\n" +
+                       "\"log or nlog or -log or -nlog\" " + "\n" +
+                       "for logarithmic functions" + "\n" +
+                       "<*><*><*><*><*><*><*><*><*><*><*><*>";
+               return logHelp;
            default:
                System.out.println("does not recognise");
                return null;
