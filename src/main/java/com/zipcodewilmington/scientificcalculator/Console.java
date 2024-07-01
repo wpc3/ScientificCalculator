@@ -110,12 +110,13 @@ public class Console {
             case "-":
                 return (Arithmetic.subtraction(x,y));
             case "/":
-                try {
-                    return (double) (x / y);
-                }catch(Exception e){
-                    System.out.println("err");
-                }
+//                try {
+////                    return (double) (x / y);
                 return (Arithmetic.division(x,y));
+//                }catch(Exception e){
+//                    System.out.println("err");
+//                }
+
             case "inv":
                 return (Arithmetic.inverse(x));
             case "[-]":

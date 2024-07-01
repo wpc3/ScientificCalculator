@@ -1,5 +1,6 @@
-package com.zipcodewilmington.scientificcalculator;
+package com.zipcodewilmington.scientific_calculator;
 
+import com.zipcodewilmington.scientificcalculator.Factorial;
 import junit.framework.TestCase;
 import org.junit.Assert;
 
