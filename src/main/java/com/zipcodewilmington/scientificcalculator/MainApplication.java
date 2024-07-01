@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 import com.zipcodewilmington.scientificcalculator.Console;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -14,11 +15,29 @@ public class MainApplication {
 
         Display display = new Display();
 
+        HelpPage helpPage = new HelpPage();
+
         Console.println("Welcome to our calculator!");
+        String helpRequest = Console.getStringInput("Type \"help\" for assistance");
+        if (helpRequest.equals("help")){
+            System.out.println(helpPage.helpOperator(helpRequest));
+            while (true){
 
-        String preferredDisplay = Console.getStringInput("DEG or RAD");
+                String helpInput = Console.getStringInput("Type a help option for assistance or \"exit\"");
 
-        display.switchDisplayMode(preferredDisplay);
+                if (helpInput.equals("exit")){
+                    break;
+                }
+
+                System.out.println(helpPage.helpOperator(helpInput));
+
+            }
+        }
+//        System.out.println(helpPage.getHelpOperators(name));
+
+//        String preferredDisplay = Console.getStringInput("DEG or RAD");
+//
+//        display.switchDisplayMode(preferredDisplay);
 
 
 
