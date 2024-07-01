@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class Arithmetic {
 
+
     public static double addition(double x, double y) {
         x = x + y;
         return x;
@@ -17,12 +18,28 @@ public class Arithmetic {
         return x;
     }
 
-    public static double division(double x, double y) {
-        x = x / y;
-        return x;
+    public static double division(double x, double y)throws ArithmeticException {
 
+        if (y == 0) {
+            System.err.println("Err");
+
+        }
+        return x / y;
+
+
+//        if(y != 0) {
+//
+//            x = x/y;
+//        }else {
+//            throw new ArithmeticException("Err");}
+//
+//        return x;
+//        try (x /y) {
+//            return x;
+//        } catch (Exception e) {
+//            System.out.println("err");
+//        }
     }
-
     public static double power(double x, double y) {
         x = Math.pow(x, y);
         return x;

@@ -40,7 +40,7 @@ public class Display {
 
 
 
-       decimal =
+       decimal =0;
 
         return decimal;
     }
