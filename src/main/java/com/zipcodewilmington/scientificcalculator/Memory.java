@@ -7,8 +7,9 @@ public class Memory {
         return memory;
     }
 
-    public void setMemory(double memory) {
+    public double setMemory(double memory) {
         this.memory = memory;
+        return memory;
 
     }
 

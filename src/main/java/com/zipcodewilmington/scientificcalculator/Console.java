@@ -96,6 +96,22 @@ public class Console {
         }
             return null;
         }
+    public static Double switchDisplay(String input, double choice ){
+        Display display = new Display();
+
+
+        switch (input){
+            case "DEG":
+                return choice;
+            case "RAD":
+                return choice;
+            default:
+                System.out.println("does not recognise");
+        }
+        return null;
+    }
+
+
 
     public static Double getArithmetic(String operator, Double x, Double y) {
         //
@@ -108,12 +124,13 @@ public class Console {
             case "-":
                 return (Arithmetic.subtraction(x,y));
             case "/":
-                try {
-                    return (double) (x / y);
-                }catch(Exception e){
-                    System.out.println("err");
-                }
+//                try {
+////                    return (double) (x / y);
                 return (Arithmetic.division(x,y));
+//                }catch(Exception e){
+//                    System.out.println("err");
+//                }
+
             case "inv":
                 return (Arithmetic.inverse(x));
             case "[-]":
@@ -146,7 +163,23 @@ public class Console {
                 return sum = 0;
             //might need a third variable declared of the sum and call on the sum variable for memory
             // can make the sum variable in main
+            case "MC":
+                return Memory.clearMemory(sum);
             case "M+":
+                return memory.setMemory(x);
+            case "MRC":
+                return memory.getMemory();
+            case "!":
+                return (Factorial.getFactorialOfNumbers(x));
+            case "log":
+                return LogarithmicFunction.baseLog(x,y);
+            case "nlog":
+                return LogarithmicFunction.naturalLog(x);
+            case "-log":
+                return LogarithmicFunction.negBaseLog(x,y);
+            case "-nlog":
+                return LogarithmicFunction.negNaturalLog(x);
+
                 return memory.getMemory();
 //            case "MRC":
 //
@@ -157,24 +190,12 @@ public class Console {
             default:
                 System.out.println("does not recognise");
                 return null;
-//            if (Objects.equals(operator, "+")){
-//
-//            } else if (Objects.equals(prompt, "-")){
-//                return -;
-//
-//            }}
-
-
 
 
         }
-        //figure out which operator
-        // make a switch statement to call for the appropriate operator method
-
-
-
 
     }
+
 //     Will come back to this. Maybe wrap this into a if/else or method?
 
 

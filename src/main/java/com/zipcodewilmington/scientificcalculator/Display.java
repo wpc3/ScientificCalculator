@@ -38,6 +38,11 @@ public class Display {
 
     public Double convertToDecimal(double decimal){
 
+
+
+
+       decimal =0;
+
         return decimal;
     }
 
